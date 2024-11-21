@@ -1,0 +1,43 @@
+/* Style général du menu */
+nav {
+    background-color: #4CAF50; /* Couleur de fond du menu */
+    padding: 15px; /* Espacement autour du menu */
+    margin: auto;
+}
+
+/* Styles pour la liste */
+.menu {
+    list-style-type: none; /* Supprime les puces des éléments de liste */
+    margin: 0; /* Supprime la marge */
+    padding: 0; /* Supprime le padding */
+    display: flex; /* Affiche les éléments de manière horizontale */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+/* Styles pour les éléments de la liste */
+.menu li {
+    margin: 0 15px; /* Espacement entre les éléments */
+}
+
+/* Styles pour les liens */
+.menu a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: white; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s; /* Transition pour un effet au survol */
+}
+
+/* Effet au survol des liens */
+.menu a:hover {
+    color: #f1f1f1; /* Couleur du texte au survol */
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column; /* Colonne sur petits écrans */
+    }
+    .menu li {
+        margin: 10px 0; /* Espacement vertical entre les éléments */
+    }
+}

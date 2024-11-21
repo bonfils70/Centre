@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style04.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-icons img {
+            width: 40px; /* Réglez la taille des icônes */
+            margin: 10px; /* Espacement entre les icônes */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <ul class="menu">            
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1><strong>Bienvenue sur notre page de contact</strong></h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <strong>Votre nom</strong>
+        <input type="text" name="nom" required>
+        <br><br>
+
+        <strong>Objectif</strong>
+        <input type="text" name="objet" required>
+        <br><br>
+
+        <strong><label for="sms">Écrivez-nous ici</label></strong>
+        <textarea id="sms" name="sms" rows="6" cols="40" required></textarea>
+        <br><br>
+
+        <strong>Votre numéro de téléphone</strong>
+        <input type="text" name="telephone" required>
+        <br><br>
+
+        <strong>Ajouter un document (PDF ou image)</strong>
+        <input type="file" name="file" accept=".pdf, .jpg, .jpeg, .png" required>
+        <br><br>
+
+        <div>
+            <button type="submit" class="centered-button">Envoyer</button>
+        </div>
+    </form>
+
+    <footer>
+        <div>
+            <p>Vous pouvez nous contacter aussi sur :</p>
+        </div>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/Moise Anzuruni Kibaja Johnson" target="_blank">
+                <img src="images/face.png" alt="Facebook">
+            </a>
+            <a href="https://wa.me/+25765881704" target="_blank">
+                <img src="images/whats.png" alt="WhatsApp">
+            </a>
+            <a href="mailto:moiseanzukijo@gmail.com" target="_blank">
+                <img src="images/email.png" alt="Gmail">
+            </a>
+            <section id="contact">
+    
+            <p>
+                Vous pouvez aussi nous appeler au <strong>+25765881704</strong>.
+            </p>
+  
+        </div>
+    </footer>
+</body>
+
+</html>

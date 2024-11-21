@@ -1,0 +1,105 @@
+/* Style général du corps */
+body {
+    font-family: Arial, sans-serif;
+    background-color: darkgray; /* Couleur de fond légère */
+    color: #333; /* Couleur de texte */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+}
+
+/* Style du titre */
+h1 {
+    text-align: center;
+    color: #0056b3; /* Couleur du titre */
+}
+
+/* Style général du formulaire */
+form {
+    background-color: #ffffff; /* Fond blanc pour le formulaire */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    border-color: #123a7b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    max-width: 600px; /* Largeur maximale du formulaire */
+    width: 100%; /* Prend toute la largeur disponible */
+    margin: 20px auto; /* Centre le formulaire horizontalement */
+}
+
+/* Style des titres de section */
+strong {
+    display: block; /* Fait passer le texte sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espacement sous le titre */
+    font-size: 1.1em; /* Taille du texte */
+}
+
+/* Style des champs de texte */
+input[type="text"],
+textarea {
+    width: 100%; /* Prend toute la largeur du formulaire */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis pour les champs */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    margin-bottom: 15px; /* Espacement sous chaque champ */
+    font-size: 1em; /* Taille de police uniforme */
+}
+
+/* Style pour la zone de texte */
+textarea {
+    resize: vertical; /* Permet de redimensionner verticalement */
+}
+
+/* Style du bouton */
+button {
+    background-color: #0056b3; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 15px; /* Espacement interne du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main au survol */
+    font-size: 1em; /* Taille de police uniforme */
+    width: 100%; /* Prend toute la largeur */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+/* Effet de survol pour le bouton */
+button:hover {
+    background-color: #004494; /* Couleur plus foncée au survol */
+}
+/* Style du footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style des icônes de contact */
+.contact-icons {
+    margin-top: 10px;
+}
+
+.contact-icons a {
+    margin: 0 10px; /* Espacement entre les icônes */
+}
+
+.contact-icons img {
+    width: 40px; /* Taille des icônes */
+    transition: transform 0.3s; /* Animation lors du survol */
+}
+
+.contact-icons img:hover {
+    transform: scale(1.1); /* Agrandissement léger lors du survol */
+}
+
+/* Ajout d'un style responsive */
+@media (max-width: 600px) {
+    form {
+        padding: 15px; /* Réduit le padding sur les petits écrans */
+    }
+
+    button {
+        padding: 12px; /* Ajustement du padding du bouton */
+    }
+}
