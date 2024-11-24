@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <form action="post">
+        <label>Nom</label>
+        <input type="text" name="name" id="name1" onblur="afficher()"><br>
+        <label>Email</label>
+        <input type="text" name="Email" id="name2" onblur="afficher()">
+    </form>
+  </body>
+  <script>
+    function afficher() {
+        const bonf = document.getElementById('name1').value;
+        const bonf2 = document.getElementById('name2').value;
+        
+        if (bonf && bonf2) {
+            if (bonf === bonf2) {
+                alert('COMPATIBLE')
+            }else {
+                alert('NON COMPATIBLE')
+            }
+        }
+    }
+  </script>
+</html>

@@ -1,0 +1,150 @@
+/* Style général du menu */
+nav {
+    background-color: #4CAF50; /* Couleur de fond du menu */
+    padding: 15px; /* Espacement autour du menu */
+    margin: auto;
+}
+
+/* Styles pour la liste */
+.menu {
+    list-style-type: none; /* Supprime les puces des éléments de liste */
+    margin: 0; /* Supprime la marge */
+    padding: 0; /* Supprime le padding */
+    display: flex; /* Affiche les éléments de manière horizontale */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+/* Styles pour les éléments de la liste */
+.menu li {
+    margin: 0 15px; /* Espacement entre les éléments */
+}
+
+/* Styles pour les liens */
+.menu a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: white; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s; /* Transition pour un effet au survol */
+}
+
+/* Effet au survol des liens */
+.menu a:hover {
+    color: #f1f1f1; /* Couleur du texte au survol */
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column; /* Colonne sur petits écrans */
+    }
+    .menu li {
+        margin: 10px 0; /* Espacement vertical entre les éléments */
+    }
+}
+.watsapp img {
+    width: 50px;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+
+  .mains{
+    width: 90%;
+    margin: 0 auto;
+    height: max-content;
+    min-height: 200px;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    box-shadow: 0 30px 50px #5553;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.mains .result{
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mains .result .name{
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.mains .temperature img{
+    width: 150px;
+    filter: drop-shadow(0 10px 50px #555);
+}
+.mains .temperature figcaption{
+    font-size: 3em;
+}
+.mains .description{
+    padding: 10px 0 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.mains ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 70%;
+}
+.mains li{
+    background-color: #f78a55;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    font-weight: bold;
+    font-size: small;
+}
+.mains ul li i{
+    font-size: 2em;
+    margin: 20px 0;
+    display: block!important;
+}
+.mains li:nth-child(2){
+    background-color: #b56291;
+}
+.mains li:nth-child(3){
+    background-color: #48567b;
+}
+.mains.error{
+    animation: errorEffect 0.3s linear 1;
+}
+@keyframes errorEffect{
+    0%{
+        transform: translate(10px, 5px)
+    }
+    25%{
+        transform: translate(-5px, 0)
+    }
+    50%{
+        transform: translate(8px, 2px)
+    }
+    75%{
+        transform: translate(-2px, 5px)
+    }
+    100%{
+        transform: translate(0, 0); 
+    }
+}
+
+ul img {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+.ups {
+        margin-bottom: 20px;
+    }
+
+.dow {
+    margin-top: 20px;
+}

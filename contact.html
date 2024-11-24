@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="style04.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style04.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .contact-icons img {
             width: 40px; /* Réglez la taille des icônes */
@@ -19,32 +19,29 @@
     <div>
         <nav>
             <ul class="menu">            
-                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="contact.html">Contactez-nous</a></li>
             </ul>
         </nav>
     </div>
     <h1><strong>Bienvenue sur notre page de contact</strong></h1>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form  id="contactForm" method="POST" enctype="multipart/form-data">
         <strong>Votre nom</strong>
-        <input type="text" name="nom" required>
+        <input type="text" name="name" id="name" required>
         <br><br>
 
         <strong>Objectif</strong>
-        <input type="text" name="objet" required>
+        <input type="text" name="objet" id="objet" required>
         <br><br>
 
         <strong><label for="sms">Écrivez-nous ici</label></strong>
-        <textarea id="sms" name="sms" rows="6" cols="40" required></textarea>
+        <textarea name="message" id="message" rows="6" cols="40" required></textarea>
         <br><br>
 
         <strong>Votre numéro de téléphone</strong>
-        <input type="text" name="telephone" required>
+        <input type="text" name="contact" id="contact" required>
         <br><br>
 
-        <strong>Ajouter un document (PDF ou image)</strong>
-        <input type="file" name="file" accept=".pdf, .jpg, .jpeg, .png" required>
-        <br><br>
 
         <div>
             <button type="submit" class="centered-button">Envoyer</button>
@@ -56,15 +53,16 @@
             <p>Vous pouvez nous contacter aussi sur :</p>
         </div>
         <div class="contact-icons">
-            <a href="https://www.facebook.com/Moise Anzuruni Kibaja Johnson" target="_blank">
-                <img src="images/face.png" alt="Facebook">
+            <a href="https://www.facebook.com/Mbombo Bonfils Lucio" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook">
             </a>
-            <a href="https://wa.me/+25765881704" target="_blank">
-                <img src="images/whats.png" alt="WhatsApp">
+            <a href="https://wa.me/+25779909070" target="_blank">
+                <img src="images/whatsapp.png" alt="WhatsApp">
             </a>
             <a href="mailto:moiseanzukijo@gmail.com" target="_blank">
                 <img src="images/email.png" alt="Gmail">
             </a>
+            
             <section id="contact">
     
             <p>
@@ -72,7 +70,12 @@
             </p>
   
         </div>
+        <div class="watsapp">
+            <a class="watsapp" href="https://wa.me/25779909070" target="_blank" rel="noopener noreferrer">
+                <img src="images/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
     </footer>
 </body>
-
+<script  type="module" src="js/index.js"></script>
 </html>

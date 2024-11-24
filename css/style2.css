@@ -1,0 +1,93 @@
+body{
+    background-image: url('images/hospi.jpg');
+    font-family: Arial, sans-serif; /* Police de caractères */
+    margin: 0;
+    padding: 20px; /* Espacement autour du contenu */
+    background-position: center;
+    background-size:cover ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    
+}
+/* Réinitialiser quelques styles par défaut */
+h1{
+    margin: center;
+    text-align: center;
+    color: #007bff;
+}
+
+
+h2, p, ul, blockquote {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header {
+    background: #007bff;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin: center;
+}
+
+section {
+    background: white;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+blockquote {
+    border-left: 4px solid #007bff;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+#contact {
+    text-align: center;
+    background: #e9ecef;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#contact p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    blockquote {
+        font-size: 0.9rem;
+    }
+}
