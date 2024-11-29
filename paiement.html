@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Paiement</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style04.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+                <li><a href="weather.html">Metéo</a></li>
+                <li><a href="paiement.html">Achat</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+        <div class="container">
+            <div class="products">
+                <main class="main bd-grid">
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image1.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            
+                            <div>
+                                <span class="card__preci card__preci--before">$20.00</span>
+                                <span class="card__preci card__preci--now">$20.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+        
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image2.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            <div>
+                                <span class="card__preci card__preci--before">$20.00</span>
+                                <span class="card__preci card__preci--now">$20.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+        
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image3.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            
+                            <div>
+                                <span class="card__preci card__preci--before">$20.00</span>
+                                <span class="card__preci card__preci--now">$20.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+        
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image4.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            
+                            <div>
+                                <span class="card__preci card__preci--before">$20.00</span>
+                                <span class="card__preci card__preci--now">$20.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+                </main>
+            </div>
+    </section>
+    <footer>
+        <div>
+            <p>Vous pouvez nous contacter aussi sur :</p>
+        </div>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/Mbombo Bonfils Lucio" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/+25779909070" target="_blank">
+                <img src="images/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="mailto:bonfilsmbombo@gmail.com" target="_blank">
+                <img src="images/gmail.webp" alt="Gmail">
+            </a>
+        </div>
+        <div class="watsapp">
+            <a class="watsapp" href="https://wa.me/25779909070" target="_blank" rel="noopener noreferrer">
+                <img src="images/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+  </body>
+  <script>
+    // const stripe = Stripe('VOTRE_CLE_PUBLIQUE_STRIPE');
+    const stripe = Stripe('pk_test_51QOczzJRqShZcJZ5XhD03gx5SDDvctfvuYX3n509jKByVTSX4eSg7ICLZX7zM2x6GHfJxchjft5zonF2uCGTmd3z009OBqRqIV');
+
+    document.getElementById('checkout-button').addEventListener('click', async () => {
+        const response = await fetch('/create-checkout-session', { method: 'POST' });
+        const session = await response.json();
+
+        // Redirection vers la page de paiement Stripe
+        const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+        if (error) {
+            console.error(error);
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style04.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+                <li><a href="weather.html">Metéo</a></li>
+                <li><a href="paiement.html">Achat</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="weater">
+        <div class="mains">
+            <section class="result">
+                <div class="upper">
+                    <figure class="name">
+                        <figcaption>Burundi</figcaption>
+                        <img src="https://flagsapi.com/BI/shiny/32.png">
+                    </figure>
+
+                    <figure class="temperature">
+                        <img src="https://openweathermap.org/img/wn/10d@4x.png">
+                        <figcaption>
+                            <span>31</span>
+                            <sup>o</sup>
+                        </figcaption>
+                    </figure>
+                    <p class="description">overcast clouds</p>
+                </div>
+                <ul>
+                    <li>
+                        <span class="ups">clouds</span>
+                        <img src="./assets/images/cloud.png" alt="">
+                        <span id="clouds" class="dow">98</span>%
+                    </li>
+                    <li>
+                        <span class="ups">humidity</span>
+                        <img src="./assets/images/humidity.png" alt="">
+                        <span id="humidity" class="dow">98</span>%
+                    </li>
+                    <li>
+                        <span class="ups">pressure</span>
+                        <img src="./assets/images/pression.png" alt="" style="width: 70px;">
+                        <span id="pressure" class="dow">1011</span>hPa
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>Vous pouvez nous contacter aussi sur :</p>
+        </div>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/Mbombo Bonfils Lucio" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/+25779909070" target="_blank">
+                <img src="images/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="mailto:bonfilsmbombo@gmail.com" target="_blank">
+                <img src="images/gmail.webp" alt="Gmail">
+            </a>
+        </div>
+        <div class="watsapp">
+            <a class="watsapp" href="https://wa.me/25779909070" target="_blank" rel="noopener noreferrer">
+                <img src="images/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+  </body>
+  <script type="module" src="js/weather.js"></script>
+</html>
