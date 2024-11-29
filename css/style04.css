@@ -76,18 +76,18 @@ footer {
 }
 
 /* Style des icônes de contact */
-.contact-icons {
+/* .contact-icons {
     margin-top: 10px;
-}
+} */
 
-.contact-icons a {
-    margin: 0 10px; /* Espacement entre les icônes */
-}
+/* .contact-icons a {
+    margin: 0 10px; /* Espacement entre les icônes *
+} */
 
-.contact-icons img {
-    width: 40px; /* Taille des icônes */
-    transition: transform 0.3s; /* Animation lors du survol */
-}
+/* .contact-icons img {
+    width: 40px; /* Taille des icônes *
+    transition: transform 0.3s; /* Animation lors du survol *
+} */
 
 .contact-icons img:hover {
     transform: scale(1.1); /* Agrandissement léger lors du survol */
