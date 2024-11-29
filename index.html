@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Hôpital</title>
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style04.css">
     <link rel="stylesheet" href="css/style.css">
- 
+
+    <script src="https://js.stripe.com/v3/"></script>
+   
 </head>
+
 <body>
     <div>
         <nav>
-            <ul class="menu">            
-                <li><a href="accueil.html">Accueil</a></li>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="contact.html">Contactez-nous</a></li>
+                <li><a href="weather.html">Metéo</a></li>
+                <li><a href="paiement.html">Achat</a></li>
             </ul>
         </nav>
     </div>
     <h1>Bienvenue sur notre plateforme</h1>
-    
+
     <section id="presentation">
         <h2>À propos de nous</h2>
-        <p>Notre hôpital s'engage à fournir des soins de santé de qualité à tous nos patients. Nous avons une équipe de professionnels dévoués prête à vous aider.</p>
+        <p>Notre hôpital s'engage à fournir des soins de santé de qualité à tous nos patients. Nous avons une équipe de
+            professionnels dévoués prête à vous aider.</p>
     </section>
-    
+
     <section id="paroles">
         <h2>Témoignages</h2>
         <blockquote>
@@ -33,21 +41,21 @@
             "Un service rapide et efficace. Je recommande cet hôpital à tous." - Visiteur satisfait
         </blockquote>
     </section>
-    <div class="weater">
+    <!-- <div class="weater">
         <div class="mains">
             <section class="result">
                 <div class="upper">
                     <figure class="name">
-                        <figcaption>Burundi</figcaption> 
+                        <figcaption>Burundi</figcaption>
                         <img src="https://flagsapi.com/BI/shiny/32.png">
                     </figure>
-        
+
                     <figure class="temperature">
                         <img src="https://openweathermap.org/img/wn/10d@4x.png">
                         <figcaption>
                             <span>31</span>
                             <sup>o</sup>
-                        </figcaption> 
+                        </figcaption>
                     </figure>
                     <p class="description">overcast clouds</p>
                 </div>
@@ -70,20 +78,183 @@
                 </ul>
             </section>
         </div>
-    </div>
+    </div> -->
 
-    <section id="contact">
-        <a href="contact.html" class="button"><h2>Contactez-nous</h2></a>
-    </section>
+    <!-- <section id="contact">
+        <a href="contact.html" class="button">
+            <h2>Contactez-nous</h2>
+        </a>
+    </section> -->
     <div class="watsapp">
         <a class="watsapp" href="https://wa.me/25779909070" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/images/WhatsApp.svg.webp" alt="WhatsApp">
+            <img src="images/whatsapp.png" alt="WhatsApp">
         </a>
     </div>
 
+    <!-- <section>
+        <div class="container">
+            <div class="products">
+                <main class="main bd-grid">
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image1.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            
+                            <div>
+                                <span class="card__preci card__preci--before">$990.00</span>
+                                <span class="card__preci card__preci--now">$749.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+        
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image2.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            <div>
+                                <span class="card__preci card__preci--before">$990.00</span>
+                                <span class="card__preci card__preci--now">$749.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+        
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image3.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            
+                            <div>
+                                <span class="card__preci card__preci--before">$990.00</span>
+                                <span class="card__preci card__preci--now">$749.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+        
+                    <article class="card">
+                        <div class="card__img">
+                            <img src="images/image4.png" alt="">
+                        </div>
+                        <div class="card__precis">
+                            <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                            
+                            <div>
+                                <span class="card__preci card__preci--before">$990.00</span>
+                                <span class="card__preci card__preci--now">$749.00</span>
+                            </div>
+                            <button id="checkout-button">Buy</button>
+                        </div>
+                    </article>
+                </main>
+            </div>
+    </section> -->
+    <div class="whatsapp-container">
+        <h2 class="heading-secondry">Envoyer un SMS</h2>
+        <form id="smsForm">
+            <div class="form-group">
+                <label for="to" class="cta-text">Numéro de destinataire (SMS):</label>
+                <input type="text" id="to" name="to" placeholder="+257XXXXXXX" required>
+            </div>
+            <div class="form-group">
+                <label for="message" class="cta-text">Message:</label>
+                <textarea id="message" name="message" placeholder="Votre message ici..." rows="5" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="response" class="hidden"></p>
+    </div>
+    <script>
+        document.getElementById('smsForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+        
+            const to = document.getElementById('to').value;
+            const message = document.getElementById('message').value; //GDWASRS7QLGEREKM5Q68FAYQ
+        
+            // Vos informations Twilio
+            const accountSid = 'ACb5bd8b0bfd546f60edb1a5e58166fc28'; 
+            const authToken = '4b17d1b88ed397e3891f0c822b6ca9b0'; 
+            const twilioPhoneNumber = '+17753707678';
+        
+            const url = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+        
+            // Création de l'objet FormData
+            const formData = new FormData();
+            formData.append('To', to);
+            formData.append('From', twilioPhoneNumber);
+            formData.append('Body', message);
+        
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Basic ' + btoa(`${accountSid}:${authToken}`),
+                    },
+                    body: formData,
+                });
+        
+                const result = await response.json();
+                if (response.ok) {
+                    document.getElementById('response').classList.remove('hidden');
+                    document.getElementById('response').innerText = "Message envoyé avec succès!";
+                } else {
+                    throw new Error(result.message || "Une erreur s'est produite.");
+                }
+            } catch (error) {
+                document.getElementById('response').classList.remove('hidden');
+                document.getElementById('response').innerText = `Erreur: ${error.message}`;
+            }
+        });
+        
+        
+      </script>
+<footer>
+    <div>
+        <p>Vous pouvez nous contacter aussi sur :</p>
+    </div>
+    <div class="contact-icons">
+        <a href="https://www.facebook.com/Mbombo Bonfils Lucio" target="_blank">
+            <img src="images/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://wa.me/+25779909070" target="_blank">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="mailto:bonfilsmbombo@gmail.com" target="_blank">
+            <img src="images/gmail.webp" alt="Gmail">
+        </a>
+    </div>
+    <div class="watsapp">
+        <a class="watsapp" href="https://wa.me/25779909070" target="_blank" rel="noopener noreferrer">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
 </body>
 
-<script  type="module" src="js/index.js"></script>
-<script  type="module" src="js/weather.js"></script>
+<script>
+    // const stripe = Stripe('VOTRE_CLE_PUBLIQUE_STRIPE');
+    const stripe = Stripe('pk_test_51QOczzJRqShZcJZ5XhD03gx5SDDvctfvuYX3n509jKByVTSX4eSg7ICLZX7zM2x6GHfJxchjft5zonF2uCGTmd3z009OBqRqIV');
+
+    document.getElementById('checkout-button').addEventListener('click', async () => {
+        const response = await fetch('/create-checkout-session', { method: 'POST' });
+        const session = await response.json();
+
+        // Redirection vers la page de paiement Stripe
+        const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+        if (error) {
+            console.error(error);
+        }
+    });
+</script>
+
+<script type="module" src="js/index.js"></script>
+<script type="module" src="js/weather.js"></script>
 
 </html>
