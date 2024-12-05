@@ -48,7 +48,7 @@
                                 <span class="card__preci card__preci--before">$20.00</span>
                                 <span class="card__preci card__preci--now">$20.00</span>
                             </div>
-                            <button id="checkout-button">Buy</button>
+                            <button id="checkout-button2">Buy</button>
                         </div>
                     </article>
         
@@ -63,7 +63,7 @@
                                 <span class="card__preci card__preci--before">$20.00</span>
                                 <span class="card__preci card__preci--now">$20.00</span>
                             </div>
-                            <button id="checkout-button">Buy</button>
+                            <button id="checkout-button3">Buy</button>
                         </div>
                     </article>
         
@@ -78,7 +78,7 @@
                                 <span class="card__preci card__preci--before">$20.00</span>
                                 <span class="card__preci card__preci--now">$20.00</span>
                             </div>
-                            <button id="checkout-button">Buy</button>
+                            <button id="checkout-button4">Buy</button>
                         </div>
                     </article>
                 </main>
@@ -120,5 +120,36 @@
             console.error(error);
         }
     });
+    document.getElementById('checkout-button4').addEventListener('click', async () => {
+        const response = await fetch('/create-checkout-session', { method: 'POST' });
+        const session = await response.json();
+
+        // Redirection vers la page de paiement Stripe
+        const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+        if (error) {
+            console.error(error);
+        }
+    });
+    document.getElementById('checkout-button3').addEventListener('click', async () => {
+        const response = await fetch('/create-checkout-session', { method: 'POST' });
+        const session = await response.json();
+
+        // Redirection vers la page de paiement Stripe
+        const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+        if (error) {
+            console.error(error);
+        }
+    });
+    document.getElementById('checkout-button2').addEventListener('click', async () => {
+        const response = await fetch('/create-checkout-session', { method: 'POST' });
+        const session = await response.json();
+
+        // Redirection vers la page de paiement Stripe
+        const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+        if (error) {
+            console.error(error);
+        }
+    });
 </script>
+<script type="module" src="js/index.js"></script>
 </html>
